@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "All variabbles: $@"
+echo "Number of variables pass: $#"
+echo "script name: $0"
+echo "current working dir: $PWD"
+echo "user detais: $HOME"
+echo "pprocess id of the script ececuition now: $$"

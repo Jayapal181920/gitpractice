@@ -5,3 +5,5 @@ echo "script name: $0"
 echo "current working dir: $PWD"
 echo "user detais: $HOME"
 echo "pprocess id of the script ececuition now: $$"
+sleep 100
+echo "PID of last background command: $!"

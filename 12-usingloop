@@ -23,5 +23,10 @@ check_root
 
 for package in $@   #reffer to all args pass to it
 do 
-    echo $package
+    dnf list install $package
+    if [ $? -ne 0 ]
+    then 
+    echo "$package is not installed "
+    dnf install $package -y
+    fi
 done

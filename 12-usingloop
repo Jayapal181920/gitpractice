@@ -1,0 +1,27 @@
+#!/bin/bash
+USERID=$(id -u) 
+R="\e[31m"
+G="\e[32m"
+N="\e[33m"
+check_root(){
+    if [ $USERID -ne 0 ]
+    then 
+        echo "Please run the script with sudo"
+    fi
+} 
+
+validate(){
+    if [ $1 -ne 0 ]
+    then 
+        echo -e "$2 is.. $R Failed $N"
+        exit 1
+    else
+    echo -e "$2 is success..$G sucess $N"
+    fi
+}
+check_root
+
+for package in $@   #reffer to all args pass to it
+do 
+    echo $package
+done

@@ -1,0 +1,6 @@
+- name: nenix install
+  hosts: web
+  vars:
+     course: "devops with aws"
+     trainer: "siva reddy"
+     

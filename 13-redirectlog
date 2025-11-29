@@ -1,0 +1,6 @@
+#!/bin/bash
+Logs_Folder="/var/log/shell-script"
+scriptName=$(echo $0 | cut -d "." -f1)
+timestamp=$(date +%y-%d-%m)
+log_file ="$Logs_Folder+$scriptName+$timestamp"
+

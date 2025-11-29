@@ -1,0 +1,7 @@
+- name: ngenix install
+  hosts: web
+  become:yes
+  taskes:
+  - name: print infomation:
+    ansible.builtin.debug:
+     msg: "hi, this ansible first class"
